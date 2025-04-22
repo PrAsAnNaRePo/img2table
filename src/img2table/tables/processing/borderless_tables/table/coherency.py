@@ -11,7 +11,7 @@ def check_row_coherency(table: Table, median_line_sep: float) -> bool:
     :param median_line_sep: median line separation
     :return: boolean indicating if table row heights are coherent
     """
-    if table.nb_rows < 2:
+    if table.nb_rows < 1:
         return False
 
     # Get median row separation
@@ -28,7 +28,7 @@ def check_column_coherency(table: Table, char_length: float) -> bool:
     :param char_length: average character length
     :return: boolean indicating if table column widths are coherent
     """
-    if table.nb_columns < 2:
+    if table.nb_columns < 1:
         return False
 
     # Get column widths

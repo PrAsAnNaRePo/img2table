@@ -41,4 +41,4 @@ def get_table(columns: ColumnGroup, row_delimiters: List[Cell], contours: List[C
     # Create table object
     table = cluster_to_table(cluster_cells=cells, elements=contours, borderless=True)
 
-    return table if table.nb_columns >= 3 and table.nb_rows >= 2 else None
+    return table if table.nb_columns >= 2 and table.nb_rows >= 1 else None

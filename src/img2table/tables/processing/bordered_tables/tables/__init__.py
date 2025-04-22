@@ -33,4 +33,4 @@ def get_tables(cells: List[Cell], elements: List[Cell], lines: List[Line], char_
     tables = [cluster_to_table(cluster_cells=cluster, elements=elements)
               for cluster in complete_clusters]
 
-    return [tb for tb in tables if tb.nb_rows * tb.nb_columns >= 2]
+    return [tb for tb in tables if tb.nb_rows * tb.nb_columns >= 1]

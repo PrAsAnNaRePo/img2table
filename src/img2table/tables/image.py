@@ -92,7 +92,7 @@ class TableImage:
                                                contours=self.contours)
 
         # Post filter bordered tables
-        self.tables = [tb for tb in self.tables if min(tb.nb_rows, tb.nb_columns) >= 2]
+        self.tables = [tb for tb in self.tables if min(tb.nb_rows, tb.nb_columns) >= 1]
 
     def extract_borderless_tables(self):
         """
@@ -112,7 +112,7 @@ class TableImage:
                                                         existing_tables=self.tables)
 
             # Add to tables
-            self.tables += [tb for tb in borderless_tbs if tb.nb_rows >= 2 and tb.nb_columns >= 3]
+            self.tables += [tb for tb in borderless_tbs if tb.nb_rows >= 1 and tb.nb_columns >= 2]
 
     def extract_tables(self, implicit_rows: bool = False, implicit_columns: bool = False, borderless_tables: bool = False) -> List[Table]:
         """
